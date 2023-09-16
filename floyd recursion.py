@@ -1,9 +1,13 @@
+# Floyd Warshall 
+# obtain the shortest path
 INF=float("inf")
 G = [[0, 7, INF, 8],
      [INF, 0, 5, INF],
      [INF, INF, 0, 2],
      [INF, INF, INF, 0]]
 nV=len(G[0])
+
+
 
 def floyd_recursive(distance, start_node, end_node, intermediate):
     if intermediate == nV:
