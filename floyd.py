@@ -1,12 +1,12 @@
 INF=float("inf")
-G = [[0, 7, INF, 8],
+matrix = [[0, 7, INF, 8],
      [INF, 0, 5, INF],
      [INF, INF, 0, 2],
      [INF, INF, INF, 0]]
-nV=len(G[0])
+nV=len(matrix[0])
 
 # Algorithm implementation
-def floyd_warshall(G):
+def floyd_warshall(matrix):
     distance = list(map(lambda i: list(map(lambda j: j, i)), G))
 
     # Adding vertices individually
@@ -29,4 +29,4 @@ def print_solution(distance):
 
 
 
-floyd_warshall(G)
+floyd_warshall(matrix)
